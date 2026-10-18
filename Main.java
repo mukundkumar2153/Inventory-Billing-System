@@ -18,7 +18,7 @@ public class Main extends HttpServlet {
     private static final String URL = env("DB_URL",
             "jdbc:mysql://localhost:3306/stock_billing?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8");
     private static final String USER = env("DB_USER", "root");
-    private static final String PASSWORD = env("DB_PASSWORD", "viva123");
+    private static final String PASSWORD = env("DB_PASSWORD", "password");
 
     private static final int LOW_STOCK = 5;
     private static final List<String> PAYMENTS = List.of("CASH", "CARD", "UPI");
