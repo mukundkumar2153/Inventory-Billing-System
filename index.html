@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmartStore POS &amp; Inventory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-box">▣</div>
+        <div>
+            <h2>SmartStore</h2>
+            <small>POS &amp; Inventory</small>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="Main" class="active">▥ Dashboard</a>
+        <a href="Main?action=billing">🛒 POS Billing</a>
+        <a href="Main?action=products">▦ Products &amp; Stock</a>
+    </nav>
+    <div class="admin">
+        Store Owner (Admin)<br>
+        <b>OWNER (ADMIN)</b>
+    </div>
+</header>
+
+<div class="container">
+    <div class="heading">
+        <h1>📈 Business Analytics Dashboard</h1>
+        <p>Real-time overview of sales, transactions, and stock health</p>
+    </div>
+    <div class="cards">
+        <div class="card stat">
+            <div class="icon">₹</div>
+            <div>
+                <small>TODAY'S REVENUE</small>
+                <h2>₹{{REVENUE}}</h2>
+            </div>
+        </div>
+        <div class="card stat">
+            <div class="icon">🛒</div>
+            <div>
+                <small>TOTAL BILLS</small>
+                <h2>{{BILLS}}</h2>
+            </div>
+        </div>
+        <div class="card stat">
+            <div class="icon">▦</div>
+            <div>
+                <small>TOTAL PRODUCTS</small>
+                <h2>{{PRODUCTS}}</h2>
+            </div>
+        </div>
+        <div class="card stat">
+            <div class="icon">⚠</div>
+            <div>
+                <small>LOW STOCK</small>
+                <h2>{{LOW_STOCK}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <div class="section-title">
+                <h2>Daily Sales Revenue (Last 7 Days)</h2>
+            </div>
+            {{CHART}}
+        </div>
+        <div class="card">
+            <div class="section-title">
+                <h2>⚠ Low Stock Warnings</h2>
+            </div>
+            {{LOW_STOCK_LIST}}
+        </div>
+    </div>
+    <div class="card table-card">
+        <div class="section-title">
+            <h2>Recent Billed Transactions</h2>
+            <a href="Main?action=billing" class="btn">+ New Bill</a>
+        </div>
+        <table>
+            <tr>
+                <th>Invoice</th>
+                <th>Customer</th>
+                <th>Payment</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+            {{RECENT_BILLS}}
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+com\vcet\student\Student.class
+com\vcet\student\Html.class
+com\vcet\student\UpdateServlet.class
+com\vcet\student\DBConnection.class
+com\vcet\student\RegisterServlet.class
+com\vcet\student\Validator.class
+com\vcet\student\DeleteServlet.class
+com\vcet\student\StudentDAO.class
+com\vcet\student\ListServlet.class

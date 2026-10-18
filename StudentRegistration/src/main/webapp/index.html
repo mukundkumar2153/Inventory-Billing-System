@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <span class="brand">VCET &middot; Student Portal</span>
+            <nav>
+                <a href="index.html">Register</a>
+                <a href="students">All Students</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h1>Student Registration</h1>
+            <p class="subtitle">Fill in your details below to register.</p>
+
+            <form id="studentForm" method="post" action="register" novalidate onsubmit="return validateForm();">
+
+                <div class="field">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" name="studentName" placeholder="e.g. Abc Surname" autocomplete="name">
+                    <span class="error" id="studentNameError"></span>
+                </div>
+
+                <div class="field">
+                    <label for="registerNumber">Register/Seat Number</label>
+                    <input type="text" id="registerNumber" name="registerNumber" placeholder="e.g. 24AIDS101">
+                    <span class="error" id="registerNumberError"></span>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="field">
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                        <option value="">-- Select Department --</option>
+                        <option value="Computer Engineering (CO)">Computer Engineering (CO)</option>
+                        <option value="Computer Science and Engineering - Data Science (CSE-DS)">Computer Science and Engineering - Data Science (CSE-DS)</option>
+                        <option value="Information Technology (IT)">Information Technology (IT)</option>
+                        <option value="Artificial Intelligence and Data Science (AI DS)">Artificial Intelligence and Data Science (AI DS)</option>
+                        <option value="Mechanical Engineering (ME)">Mechanical Engineering (ME)</option>
+                        <option value="Electronics and Telecommunication Engineering (ETE)">Electronics and Telecommunication Engineering (ETE)</option>
+                        <option value="Civil Engineering (CE)">Civil Engineering (CE)</option>
+                    </select>
+                    <span class="error" id="departmentError"></span>
+                </div>
+
+                <div class="field">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel">
+                    <span class="error" id="mobileError"></span>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn">Register</button>
+                    <button type="reset" class="btn btn-secondary" onclick="clearErrors()">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/validate.js"></script>
+</body>
+</html>
